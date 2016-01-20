@@ -6,6 +6,7 @@ echo "You entered: $feedfile"
 
 echo Processing Enrolment Feed
 
+echo 'select * from course_users where pk1 in('
 
 input=$feedfile
 
@@ -13,5 +14,6 @@ while read line
 do
         userid=$(echo $line | cut -d' ' -f1)
         courseid=$(echo $line | cut -d' ' -f2)
-        echo -e 'select * from course_users where users_pk1 = (select pk1 from users where user_id = '$userid') and crsmain_pk1 =  (select pk1 from course_main where course_id = '$courseid')'
+        echo -e 'select pk1 from course_users where users_pk1 = (select pk1 from users where user_id = '$userid') and crsmain_pk1 = (select pk1 from course_main where course_id = '$courseid'),'
 done < "$input"
+
