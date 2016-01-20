@@ -1,0 +1,1 @@
+select * from course_users where users_pk1 = (select pk1 from users where user_id = '$userid') and crsmain_pk1 = (select pk1 from course_main where course_id = '$courseid')

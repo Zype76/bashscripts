@@ -1,2 +1,2 @@
-test test
-test1 test1
+'userid1' 'courseid1'
+'userid2' 'courseid2' 
