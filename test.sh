@@ -1,8 +1,13 @@
 #!/bin/bash
 
+echo "Please enter the name of your feed file: "
+read feedfile
+echo "You entered: $feedfile"
+
 echo Processing Enrolment Feed
 
-input=feed.txt
+
+input=$feedfile
 
 while read line
 do
